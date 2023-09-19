@@ -87,7 +87,7 @@ Example command:
 --->
 
 ### Usage
- run rails s
+ run rails s and open a browser, visit http://127.0.0.1:3000 to see it.
 <!--
 Example command:
 <!--
