@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This migration creates the "likes" table, which is used to track likes on posts.
 class CreateLikes < ActiveRecord::Migration[7.0]
   def change
