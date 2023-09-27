@@ -1,28 +1,26 @@
 <%= render "users/header" %>
 
-<% @users.each do |user| %>
-
 <div class="gap-1" style="display:flex; justify-content: start; width:100%;">
-    <div class="user-card gap-0 flex-col items-start border-card">
-      <span class="card-title">Bio</span>
-      <span class="user-bio"><%= user.bio %></span>
-    </div>
+  <div class="user-card gap-0 flex-col items-start border-card">
+    <span class="card-title">Bio</span>
+    <span class="user-bio"><%= @user.bio %></span>
   </div>
+</div>
 
-  <div class="post-voloany">
-  <%= render "posts/post" %>
-  </div>
-
-    <a 
-      href="<%= user_posts_path(user_id: @user.id) %>" 
-      class="user-card border-card" 
-      style="width: fit-content;"
-    > 
-      See all post  
-    </a>
-  <% else %>
-    <p>No posts found.</p>
+<div class="post-voloany">
+  <% if @recent_posts.any? %>
+    <% @recent_posts.each do |recent_post| %>
+      <span class="card-title"><%= recent_post.title %></span>
+      <span class="user-bio line-clamp-2"><%= recent_post.text %></span>
+      <span class="user-totalpost w-full">Comments : <%= recent_post.comments_counter %>, Likes : <%= recent_post.likes_counter %></span>
+    <% end %>
   <% end %>
 </div>
 
-<% end %>
+<a 
+  href="<%= user_posts_path(user_id: @user.id) %>" 
+  class="user-card border-card" 
+  style="width: fit-content;"
+> 
+  See all posts  
+</a>
