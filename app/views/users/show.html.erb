@@ -1,2 +1,28 @@
-<h1>Here is a list of users</h1>
+<%= render "users/header" %>
 
+<% @users.each do |user| %>
+
+<div class="gap-1" style="display:flex; justify-content: start; width:100%;">
+    <div class="user-card gap-0 flex-col items-start border-card">
+      <span class="card-title">Bio</span>
+      <span class="user-bio"><%= user.bio %></span>
+    </div>
+  </div>
+
+  <div class="post-voloany">
+  <%= render "posts/post" %>
+  </div>
+
+    <a 
+      href="<%= user_posts_path(user_id: @user.id) %>" 
+      class="user-card border-card" 
+      style="width: fit-content;"
+    > 
+      See all post  
+    </a>
+  <% else %>
+    <p>No posts found.</p>
+  <% end %>
+</div>
+
+<% end %>
