@@ -1,18 +1,6 @@
-<% @posts.each do |post| %>
+<div class="post-container">
+  <span class="card-title"><%= post.title %></span>
+  <span class="user-bio line-clamp-2"><%= post.text %></span>
+  <span class="user-totalpost w-full">Comments : <%= post.comments_counter %>, Likes : <%= post.likes_counter %></span>
+</div>
 
-<a class="user-card gap-0-5 flex-col items-start border-card" href="<%= user_post_path(user_id: post.author_id, id: post.id) %>">
-    <span class="card-title"><%= post.title %></span>
-    <span class="user-bio"><%= post.text %></span>
-    <span class="user-totalpost w-full">Comments : <%= post.comments_counter %>, Likes : <%= post.likes_counter %></span>
-            <% if comments.present? %>
-                <% if comments.any? %>
-                    
-                <% else %>
-                    <div class="comment-container">
-                        <div>No comment</div>
-                    </div>
-                <% end %>
-            <% end %>
-</a>
-
-<% end %>

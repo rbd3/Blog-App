@@ -10,9 +10,7 @@
 <div class="post-voloany">
   <% if @recent_posts.any? %>
     <% @recent_posts.each do |recent_post| %>
-      <span class="card-title"><%= recent_post.title %></span>
-      <span class="user-bio line-clamp-2"><%= recent_post.text %></span>
-      <span class="user-totalpost w-full">Comments : <%= recent_post.comments_counter %>, Likes : <%= recent_post.likes_counter %></span>
+      <%= render partial: "posts/post", locals: { post: recent_post } %>
     <% end %>
     <% else %>
     <p>No recent posts found for <%= @user.name %>.</p>

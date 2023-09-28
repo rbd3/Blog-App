@@ -10,3 +10,4 @@
         <div>No comment</div>
     <% end %>
 </div>
+
