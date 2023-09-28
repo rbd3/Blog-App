@@ -1,4 +1,4 @@
-<%= render "users/header" %>
+<%= render partial: "header", locals: { user: @user } %>
 
 <div class="gap-1" style="display:flex; justify-content: start; width:100%;">
   <div class="user-card gap-0 flex-col items-start border-card">
@@ -14,6 +14,8 @@
       <span class="user-bio line-clamp-2"><%= recent_post.text %></span>
       <span class="user-totalpost w-full">Comments : <%= recent_post.comments_counter %>, Likes : <%= recent_post.likes_counter %></span>
     <% end %>
+    <% else %>
+    <p>No recent posts found for <%= @user.name %>.</p>
   <% end %>
 </div>
 
