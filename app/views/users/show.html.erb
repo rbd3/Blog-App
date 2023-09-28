@@ -1,7 +1,7 @@
 <%= render partial: "header", locals: { user: @user } %>
 
-<div class="gap-1" style="display:flex; justify-content: start; width:100%;">
-  <div class="user-card gap-0 flex-col items-start border-card">
+<div class="gap-1">
+  <div class="user-card">
     <span class="card-title">Bio</span>
     <span class="user-bio"><%= @user.bio %></span>
   </div>
@@ -19,8 +19,9 @@
 
 <a 
   href="<%= user_posts_path(user_id: @user.id) %>" 
-  class="user-card border-card" 
-  style="width: fit-content;"
+  class="user-card" 
 > 
-  See all posts  
+  <button class="see-all-posts">
+  See All Posts
+  </button>  
 </a>
