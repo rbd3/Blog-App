@@ -8,11 +8,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
     @comments = @post.comments
-    
-    if @user.posts.include?(@post)
-      @index = @user.posts.order(:created_at).pluck(:id).index(@post.id) + 1
-    else
-      @index = nil
-    end
+
+    @index = (@user.posts.order(:created_at).pluck(:id).index(@post.id) + 1 if @user.posts.include?(@post))
   end
 end
