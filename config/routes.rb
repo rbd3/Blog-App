@@ -7,12 +7,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show, :new, :create] do
-      resources :comments, only: [:create] # Nested comments routes
-      member do
-        post 'like' => 'likes#create'
-      end
-    end
+    resources :posts, only: [:index, :show, :new, :create]
+  end
+
+  resources :posts do
+    resources :comments, only: [:new, :create]
+    resource :likes, only: [:create]
   end
 end
 
