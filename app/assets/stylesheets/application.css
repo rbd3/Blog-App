@@ -101,3 +101,18 @@ font-weight: bold;
     color: rgb(225, 22, 22);
     font-size: 18px;
 }
+
+.no-comment {
+    margin-left: 5%;
+    color: rgb(225, 22, 22);
+    font-size: 18px;
+    margin-top: 1%;
+}
+
+.pagination {
+    width: 10%;
+    font-size: 16px;
+    margin-top: 2%;
+    background-color: burlywood;
+    margin-left: 10%;   
+}

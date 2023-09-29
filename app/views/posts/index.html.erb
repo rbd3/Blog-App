@@ -5,10 +5,12 @@
   <div class="recent-comments">
   <% if post.recent_comments.any? %>
     <% post.recent_comments.each do |comment| %>
-      <p><%= comment.user.name %>: <%= comment.text %></p>
+      <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>
     <% else %>
-        <div>No comment</div>
+        <div class="no-comment">No comment yet for this post</div>
     <% end %>
   </div>
 <% end %>
+
+<button class = "pagination"><%= link_to "Pagination", user_posts_path(@user) %></button>

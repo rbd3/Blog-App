@@ -15,7 +15,7 @@
   <div class = "all-comments">
   <% if @post.comments.any? %>
     <% @post.comments.each do |comment| %>
-      <p><%= comment.user.name %>:
+      <p><%= comment.author.name %>:
       <%= comment.text %></p>
     <% end %>
     <% else %>
