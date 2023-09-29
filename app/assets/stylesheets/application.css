@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: burlywood;
+}
+
+.flex-col {
+    width: 20%;
+    height: auto;
+    border: solid 2px;
+    margin-left: 5%;
+    margin-top: -1.5%;
+}
+
+.user-photo {
+    margin-left: 1%;
+}
+
+.container-header {
+    margin-bottom: 1%;
+}
+
+.user-totalpost {
+    margin-left: 30%;
+}
+
+.header-title {
+    font-size: 24px;
+}
