@@ -2,7 +2,7 @@
 
 <div class="gap-1">
   <div class="user-card">
-    <span class="card-title">Bio</span>
+    <span class="bio-title">Bio</span>
     <span class="user-bio"><%= @user.bio %></span>
   </div>
 </div>
@@ -13,15 +13,11 @@
       <%= render partial: "posts/post", locals: { post: recent_post } %>
     <% end %>
     <% else %>
-    <p>No recent posts found for <%= @user.name %>.</p>
+    <p class="no-post">No recent posts found for <%= @user.name %>.</p>
   <% end %>
 </div>
 
-<a 
-  href="<%= user_posts_path(user_id: @user.id) %>" 
-  class="user-card" 
-> 
-  <button class="see-all-posts">
-  See All Posts
-  </button>  
-</a>
+
+  <button class="see-all-posts" >
+  <%= link_to "See All Posts", user_posts_path(@user) %>
+  </button>

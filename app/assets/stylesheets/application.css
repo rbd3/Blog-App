@@ -39,4 +39,65 @@ body {
 
 .header-title {
     font-size: 24px;
+    font-weight: bold;
+}
+
+.user-card {
+    width: 30%;
+    height: auto;
+    border: solid 2px;
+    margin-left: 1%;
+    padding-bottom: 1%;
+}
+
+.bio-title {
+margin-bottom: 5%;
+margin-left: 1%;
+display: block;
+font-weight: bold;
+}
+
+.user-bio {
+    margin-top: 5%;
+    margin-left: 1%;
+}
+
+.post-container {
+ display: flex;
+ width: 30%;
+ height: auto;
+ border: solid 2px;
+ margin-left: 1%; 
+ margin-top: 1%;
+}
+
+.post-title {
+    margin-bottom: 5%;
+    margin-left: 1%;
+    font-weight: bold;
+}
+
+.post-bio {
+    margin-top: 8%;
+    margin-left: -8.5%;
+    text-wrap: nowrap;
+}
+
+.post-totalpost {
+    margin-top: 12%;
+    margin-left: 25%;
+}
+
+.see-all-posts {
+    width: 10%;
+    font-size: 16px;
+    margin-top: 2%;
+    background-color: burlywood;
+    margin-left: 10%;
+}
+
+.no-post {
+    margin-left: 5%;
+    color: rgb(225, 22, 22);
+    font-size: 18px;
 }
