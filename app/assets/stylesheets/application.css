@@ -116,3 +116,42 @@ font-weight: bold;
     background-color: burlywood;
     margin-left: 10%;   
 }
+
+.post-details {
+    display: flex;
+    width: 30%;
+    height: auto;
+    border: solid 2px;
+    margin-left: 1%; 
+    margin-top: 1%;   
+}
+
+.comment-totalpost {
+    margin-top: 12%;
+    margin-left: 25%;
+}
+
+.post-comment-1 {
+    margin-top: 15%;
+    margin-left: -52%;   
+}
+
+.comment-title {
+    margin-left: 1%;
+}
+
+.comment-count {
+    margin-top: 25%;
+    margin-left: 120%;
+    text-wrap: nowrap;
+}
+
+.like-count {
+    margin-top: -38%;
+    margin-left: 240%;
+    text-wrap: nowrap;
+}
+
+.recent-comments {
+ margin-left: 2%;   
+}
