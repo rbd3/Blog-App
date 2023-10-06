@@ -1,5 +1,6 @@
 <div class="post-container">
-  <span class="post-title"><%= post.title %></span>
+  <%= link_to post.title, post_path(post, user_id: post.author_id), class: 'post-title' %>
+
   <span class="post-bio"><%= post.text %></span>
   <span class="post-totalpost">Comments : <%= post.comments_counter %>, Likes : <%= post.likes_counter %></span>
 </div>
