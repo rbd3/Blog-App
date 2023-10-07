@@ -71,3 +71,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'selenium-webdriver'
 end
+
+gem 'devise', '~> 4.9'
+
+gem 'cancancan', '~> 3.5'
