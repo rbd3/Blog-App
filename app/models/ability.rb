@@ -1,2 +1,3 @@
 class Ability
-  end
+  include CanCan::Ability
+end
