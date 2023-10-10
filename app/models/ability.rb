@@ -1,6 +1,6 @@
 class Ability
   include CanCan::Ability
-
+  # fix error
   def initialize(user)
     user ||= User.new
     can :read, User
